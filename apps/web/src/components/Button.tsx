@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './Button.module.scss'
 
 type Props = {
   children: React.ReactNode
@@ -7,16 +8,8 @@ type Props = {
 }
 
 export default function Button({ children, onClick, variant = 'primary' }: Props) {
-  const style = {
-    padding: '8px 16px',
-    borderRadius: 6,
-    border: 'none',
-    cursor: 'pointer',
-    backgroundColor: variant === 'primary' ? '#2563eb' : '#e5e7eb',
-    color: variant === 'primary' ? '#fff' : '#111'
-  }
   return (
-    <button style={style as React.CSSProperties} onClick={onClick}>
+    <button className={`${styles.root} ${variant === 'primary' ? styles.primary : styles.secondary}`} onClick={onClick}>
       {children}
     </button>
   )

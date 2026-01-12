@@ -1,5 +1,6 @@
 import React from 'react'
+import styles from './ListView.module.scss'
 
 export default function ListView({ children }: { children: React.ReactNode }) {
-  return <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: 12 }}>{children}</div>
+  return <div className={styles.grid}>{children}</div>
 }

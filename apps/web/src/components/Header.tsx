@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import styles from './Header.module.scss'
 
 export default function Header() {
   return (
-    <header style={{ padding: 16, display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #eee' }}>
-      <h2 style={{ margin: 0 }}>ShopApp</h2>
-      <nav style={{ display: 'flex', gap: 12 }}>
+    <header className={styles.root}>
+      <h2 className={styles.brand}>ShopApp</h2>
+      <nav className={styles.nav}>
         <Link to="/">Home</Link>
         <Link to="/dashboard">Dashboard</Link>
         <Link to="/login">Login</Link>

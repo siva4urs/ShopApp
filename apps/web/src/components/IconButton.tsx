@@ -1,8 +1,9 @@
 import React from 'react'
+import styles from './IconButton.module.scss'
 
 export default function IconButton({ onClick, label }: { onClick?: () => void; label?: string }) {
   return (
-    <button onClick={onClick} style={{ padding: 8, borderRadius: 8, border: '1px solid #ddd', background: 'white' }}>
+    <button onClick={onClick} className={styles.root}>
       {label || '⋯'}
     </button>
   )

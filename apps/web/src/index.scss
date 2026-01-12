@@ -1,0 +1,9 @@
+@import '../../../../packages/design-tokens/src/_tokens.scss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* small local helpers */
+.app-container {
+  padding: 1rem;
+}

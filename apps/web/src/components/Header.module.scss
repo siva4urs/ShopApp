@@ -1,0 +1,9 @@
+.root {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+.brand { margin: 0 }
+.nav { display: flex; gap: 12px }
