@@ -1,0 +1,23 @@
+{
+  "name": "shopapp-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "pnpm --filter ./apps/web dev",
+    "dev:mobile": "pnpm --filter ./apps/mobile start",
+    "dev:graphql": "pnpm --filter ./packages/graphql dev",
+    "dev": "concurrently \"pnpm dev:web\" \"pnpm dev:graphql\" \"pnpm dev:mobile\"",
+    "build": "pnpm -w run -r build",
+    "test": "pnpm -w run -r test",
+    "e2e": "playwright test"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "playwright": "^1.38.0",
+    "pnpm": "^8.0.0"
+  }
+}
