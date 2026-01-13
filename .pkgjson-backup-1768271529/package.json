@@ -13,16 +13,11 @@
     "dev": "concurrently \"pnpm dev:web\" \"pnpm dev:graphql\" \"pnpm dev:mobile\"",
     "build": "pnpm -w run -r build",
     "test": "pnpm -w run -r test",
-    "e2e": "playwright test",
-    "prepare": "npx simple-git-hooks"
+    "e2e": "playwright test"
   },
   "devDependencies": {
-    "concurrently": "latest",
-    "playwright": "latest",
-    "pnpm": "latest",
-    "simple-git-hooks": "latest"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "pnpm -w run -r lint-staged"
+    "concurrently": "^8.2.0",
+    "playwright": "^1.38.0",
+    "pnpm": "^8.0.0"
   }
 }
