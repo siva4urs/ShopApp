@@ -17,6 +17,7 @@
     "prepare": "npx simple-git-hooks"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
     "concurrently": "latest",
     "playwright": "latest",
     "pnpm": "latest",
